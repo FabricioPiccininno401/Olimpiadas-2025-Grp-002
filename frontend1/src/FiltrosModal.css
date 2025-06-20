@@ -1,0 +1,202 @@
+/* Fondo oscuro traslúcido */
+.modal-filtros-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+/* Caja del modal */
+.modal-filtros {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+  max-width: 420px;
+  margin-top: 40px;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contenedor de filtros */
+.filtros-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* Título del modal */
+.modal-filtros h2 {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 16px;
+  margin: 0;
+  color: #1f2937;
+}
+
+/* Botones de navegación de filtros (Precio, Estrellas, etc) */
+.filtro-btn {
+  background-color: transparent;
+  border: none;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 16px;
+  color: #111827;
+  width: 100%;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.filtro-btn:hover {
+  background-color: #f9fafb;
+}
+
+/* Detalle del filtro (inputs/selects) */
+.filtro-detalle {
+  padding: 16px;
+}
+
+.filtro-detalle h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+/* Inputs y selects */
+input[type="number"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+/* Botón volver */
+.btn-volver {
+  background: none;
+  color: #2563eb;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-top: 5px;
+  transition: color 0.2s;
+}
+
+.btn-volver:hover {
+  color: #1d4ed8;
+}
+
+/* Acciones de filtros al fondo */
+.acciones-filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+
+.btn-restablecer {
+  background-color: transparent;
+  color: #5674d6;
+  border: none;
+  font-size: 15px;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-cerrar {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn-aplicar {
+  background-color: #7792cc;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 90px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-aplicar:hover {
+  background-color: #667cac;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 480px) {
+  .modal-filtros {
+    border-radius: 0;
+    margin-top: 0;
+  }
+}
+
+.principal, .btn-style{
+  display: flex;
+  justify-content: space-between;
+}
+
+.primero{
+  margin-top: 50px;
+  border-top: 1px solid #c4c6ca;
+}
+
+.segundo{
+  border-top: 1px solid #c4c6ca;
+  border-bottom: 1px solid #c4c6ca;
+}
+
+.tercero{
+  border-bottom: 1px solid #c4c6ca;
+}
+
+.span{
+  display: flex;
+  justify-content: center;
+}
+
+.volver-precio{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.h3-precio{
+  margin-left: 40px;
+}

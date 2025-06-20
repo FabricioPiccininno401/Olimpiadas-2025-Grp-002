@@ -1,0 +1,213 @@
+.carrito-container {
+  max-width: 1200px;
+  margin: 120px auto 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carrito-title {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #222;
+}
+
+.carrito-empty {
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+.carrito-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.carrito-card {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  border-radius: 12px;  /* un poco más pequeño */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border: 1px solid #ddd;
+  max-height: 300px;  /* achicamos la altura total */
+}
+
+.carrito-imagen {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .carrito-imagen {
+    width: 350px;
+  }
+}
+
+@media (max-width: 668px) {
+  .carrito-imagen {
+    width: 300px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 568px) {
+  .carrito-imagen {
+    width: 200px;
+  }
+}
+
+.carrito-info {
+  flex: 1;
+  padding: 12px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  position: relative;
+}
+
+.contenedor-eliminar {
+  position: relative;
+}
+
+.btn-eliminar {
+  position: absolute;
+  top: -277px;
+  right: -30px;
+  padding: 8px 15px;
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 1px 8px 1px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-eliminar:hover {
+  background: #d9363e;
+}
+
+
+.carrito-info h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.detalles > div {
+  font-size: 13px;
+  margin: 2px 7px;
+}
+
+.rating-stars{
+  display: flex;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  padding: 0px 8px;
+  background: #06b6d4;
+  border-radius: 15px;
+}
+
+.stars span {
+  font-size: 16px;
+}
+
+.precio-container {
+  margin-top: 8px;
+}
+
+.descuento-box {
+  margin-left: -5px;
+  padding: 0px 8px;
+  font-size: 11px;
+}
+
+.precio-original {
+  margin-top: 0px;
+  margin-left: 6px;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.precio-final{
+  margin-top: -5px;
+  font-size: 26px;
+}
+
+.impuestosC {
+  margin-top: -15px;
+  font-size: 11px;
+}
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.carrito-total h3 {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.total-precio {
+  font-size: 30px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.iniciar-compra{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-compra{
+  width: 200px;
+  height: 60px;
+  padding: 12px 0px;
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-compra:hover {
+  background: #d9363e;
+}
+
+.resumen-compra{
+  margin-top: 16px;
+}
+
+.totales{
+  margin-top: -30px;
+}
+
+.total-pagar{
+  font-size: 23px;
+  margin-top: 30px;
+}

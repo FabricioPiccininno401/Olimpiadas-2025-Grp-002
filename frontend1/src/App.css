@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #eef2ff, #f0f4ff, #fff);
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 110px;
+}
+

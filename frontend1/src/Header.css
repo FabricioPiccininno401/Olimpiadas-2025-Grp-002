@@ -1,0 +1,255 @@
+body:not(.auth-page) {
+  padding-top: 0px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #eef2ff, #f0f4ff, #fff);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fondo oscuro cuando el menú móvil está activo */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+/* Header fijo */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.static-header {
+  position: relative;
+}
+
+/* Contenedor principal del header */
+.header-container {
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(to right, #06b6d4, #3b82f6, #4f46e5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido del header alineado */
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo-image {
+  height: 85px;
+  width: 150px;
+}
+
+/* Navegación escritorio */
+.header-nav-desktop {
+  display: flex;
+  gap: 24px;
+}
+
+.header-link {
+  color: white;
+  font-size: 23px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.1s;
+  white-space: wrap;
+}
+
+@media (min-width: 1024px) {
+  .header-link {
+    margin: 0 40px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 850px) {
+  .header-link {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 849px) and (min-width: 769px) {
+  .header-link {
+    margin: 0 10px;
+  }
+}
+
+
+.header-link:hover {
+  color: #c0c0bf;
+}
+
+.pendientes {
+  margin-left: 12px;
+}
+
+/* Agrupación navegación */
+.separar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Botón login */
+.btn-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin-right: 20px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-login:hover {
+  background-color: #f3f4f6;
+}
+
+.btn-login .icon-container {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-login .icon-container svg {
+  width: 24px;
+  height: 24px;
+  stroke: black;
+  fill: none;
+  stroke-width: 2;
+}
+
+.btn-login span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Botón de menú hamburguesa */
+.header-menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Solo visible en móvil */
+@media (max-width: 768px) {
+  .header-nav-desktop {
+    display: none;
+  }
+
+  .header-menu-button {
+    display: block;
+  }
+
+  .btn-login {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-right: 8px;
+  }
+
+  .logo-image {
+    height: 60px;
+    width: auto;
+  }
+
+  .header-content {
+    padding: 12px 16px;
+  }
+}
+
+/* Navegación móvil */
+.header-nav-mobile {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 16px 24px;
+  z-index: 999;
+  animation: fadeDown 0.25s ease-in-out;
+  border-bottom: 2px solid #e5e7eb;
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-nav-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header-nav-mobile-list li {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.header-nav-mobile .header-link {
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header-nav-mobile .header-link:hover {
+  color: #3b82f6;
+}
+
+/* Botón cerrar sesión en móvil */
+.btn-logout-mobile {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-logout-mobile:hover {
+  color: #b91c1c;
+}
+
+.acceder-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
