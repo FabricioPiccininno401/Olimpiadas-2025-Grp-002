@@ -228,7 +228,7 @@ export default function Destinos() {
                 <span className="price-original">${destino.precioOriginal}</span>
                 <span className="price-final">${destino.precio}</span>
               </div>
-              {usuario?.rol !== "admin" && (
+              {usuario?.rol === 'cliente' && (
                 <button
                   onClick={() => manejarClick(destino)}
                   className={`btn-agregar ${estadoBoton[destino.id]}`}
