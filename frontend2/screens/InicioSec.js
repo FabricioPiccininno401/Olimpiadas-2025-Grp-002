@@ -15,7 +15,7 @@ export default function InicioSec({ navigation }) {
     }
 
     try {
-      const response = await fetch("http://192.168.0.246:3001/api/login", {
+      const response = await fetch("http://localhost:3001/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
