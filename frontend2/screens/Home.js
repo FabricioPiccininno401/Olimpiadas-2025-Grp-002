@@ -7,7 +7,7 @@ export default function Home({ navigation }) {
   const [selectedId, setSelectedId] = useState();
 
   useEffect(() => {
-    fetch("http://192.168.0.246:3001/api/servicios") 
+    fetch("http://localhost:3001/api/servicios") 
       .then((res) => res.json())
       .then((data) => setServicios(data))
       .catch((err) => {
