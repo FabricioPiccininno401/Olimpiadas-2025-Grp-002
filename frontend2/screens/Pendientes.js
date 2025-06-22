@@ -29,13 +29,13 @@ export default function Pendientes() {
     console.log("Se activo el fetch desde el front");
 
     try {
-      const res = await fetch("http://192.168.0.246:3001/api/pendientes", {
+      const res = await fetch("http://localhost:3001/api/pendientes", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
           "Authorization": token
         }
-        // ❌ NO body en GET
+   
       });
 
       const data = await res.json();
@@ -64,7 +64,7 @@ export default function Pendientes() {
   }
 
   try {
-    const res = await fetch("http://192.168.0.246:3001/api/EliminarPedido", {
+    const res = await fetch("http://localhost:3001/api/EliminarPedido", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
