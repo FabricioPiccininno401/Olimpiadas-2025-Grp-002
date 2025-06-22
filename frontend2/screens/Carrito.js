@@ -14,7 +14,7 @@ export default function Carrito({ navigation }) {
         return;
       }
       setToken(t);
-      fetch("http://192.168.0.246:3001/api/carrito_lista", {
+      fetch("http://localhost:3001/api/carrito_lista", {
         headers: {
           "Authorization": t
         }
@@ -32,7 +32,7 @@ export default function Carrito({ navigation }) {
     if (!token) return;
 
     try {
-      const res = await fetch("http://192.168.0.246:3001/api/eliminar", {
+      const res = await fetch("http://localhost:3001/api/eliminar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ export default function Carrito({ navigation }) {
   const confirmarCompra = async () => {
     if (!token) return;
     try {
-      const res = await fetch("http://192.168.0.246:3001/api/comprar", {
+      const res = await fetch("http://localhost:3001/api/comprar", {
         method: "POST",
         headers: {
           "Authorization": token,
