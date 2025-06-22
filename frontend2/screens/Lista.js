@@ -28,7 +28,7 @@ export default function Lista({ navigation }) {
         }
         setToken(t);
         
-        fetch("http://192.168.0.246:3001/api/servicios") 
+        fetch("http://localhost:3001/api/servicios") 
           .then(res => res.json())
           .then(data => setServicios(data))
           .catch(err => {
@@ -45,7 +45,7 @@ export default function Lista({ navigation }) {
     }
 
     try {
-      const res = await fetch("http://192.168.0.246:3001/api/carrito", {
+      const res = await fetch("http://localhost:3001/api/carrito", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
