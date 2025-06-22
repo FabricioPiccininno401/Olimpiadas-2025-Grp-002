@@ -16,7 +16,7 @@ export default function Consultar({ navigation }) {
 
     setToken(t);
 
-    fetch("http://192.168.0.246:3001/api/buscar_pedidos", {
+    fetch("http://localhost:3001/api/buscar_pedidos", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id_usuario: id })
@@ -37,7 +37,7 @@ export default function Consultar({ navigation }) {
   };
 
   const confirmarPago = async (id_Pedido) => {
-    const res = await fetch("http://192.168.0.246:3001/api/comfirmarEnvio", {
+    const res = await fetch("http://localhost:3001/api/comfirmarEnvio", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id_usuario: id, id_pendiente: id_Pedido })
@@ -53,7 +53,7 @@ export default function Consultar({ navigation }) {
   };
 
   const cancelarViaje = async (id_Pedido) => {
-    const res = await fetch("http://192.168.0.246:3001/api/eliminarPedidoAdmin", {
+    const res = await fetch("http://localhost:3001/api/eliminarPedidoAdmin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id_usuario: id, id_pendiente: id_Pedido })
