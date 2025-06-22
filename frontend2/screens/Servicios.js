@@ -11,7 +11,7 @@ export default function Servicios({ navigation }) {
   const [duracion, setDuracion] = useState('');
   const [calificacion, setCalificacion] = useState('');
   const [stars, setStars] = useState('');
-//Envia al backend los datos para agregar a la tabla servicios
+
   async function agregarServicio() {
     if (!producto || !preOriginal || !preFinal || !img || !duracion || !calificacion || !stars) {
       Alert.alert("Error", "Por favor completa todos los campos");
@@ -21,7 +21,7 @@ export default function Servicios({ navigation }) {
     try {
       const token = await AsyncStorage.getItem("token");
 
-      const response = await fetch("http://192.168.0.246:3001/api/agregar_destino", {
+      const response = await fetch("http://localhost:3001/api/agregar_destino", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export default function Servicios({ navigation }) {
       }
 
       Alert.alert("Éxito", "Servicio agregado correctamente");
-      navigation.goBack(); // volver a la pantalla anterior
+      navigation.goBack(); 
 
     } catch (error) {
       console.error("Error al enviar:", error);
